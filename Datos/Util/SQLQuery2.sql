@@ -84,19 +84,6 @@ INSERT INTO Vuelos Values(@NumeroV,@Fecha,@Salida,@Llegada,@COrigen,@CDestino,@A
 END
 GO
 
-CREATE PROC InsertarVuelo
-@NumeroV int,
-@Fecha Date,
-@Salida Time,
-@Llegada Time,
-@COrigen int,
-@CDestino int,
-@Aerolinea int,
-@Estado bit
-AS BEGIN
-INSERT INTO Vuelos Values(@NumeroV,@Fecha,@Salida,@Llegada,@COrigen,@CDestino,@Aerolinea,@Estado)
-END
-GO
 
 CREATE PROC CambiarEstadoVuelo
 @ID int,
