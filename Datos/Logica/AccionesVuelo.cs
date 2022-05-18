@@ -43,7 +43,6 @@ namespace Datos.Logica
             }
             catch(SqlException ex)
             {
-               MessageBox.Show("Test");
                 Console.WriteLine("El no. ya existe");
             }
             catch (NullReferenceException ex)
