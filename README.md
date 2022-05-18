@@ -1,11 +1,11 @@
 # Gestor de Vuelos Aeropuerto
 
-### Desarollado por: Juan David Rosero
+### Desarollado por: Juan David Rosero Torres
 ### Definición
 En este repositorio encontrará en desarrollo en tres capas de un aplicativo que permite a los administradores manipular toda la infromación referente a los vuelos en un aeropuerto, y a los usuarios consultar los vuelos.
 ### Caracteristicas
-- Desarollado en .NET 6.0
-- Desarollado en Visual Studio 2022
+- Desarrollado en .NET 6.0
+- Desarrollado en Visual Studio 2022
 - Base de datos en SQL Server 2019
 
 ### Instruciones para su uso
