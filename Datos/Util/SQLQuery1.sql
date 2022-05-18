@@ -1,0 +1,49 @@
+CREATE DATABASE Prueba;
+go
+use Prueba;
+
+CREATE TABLE Ciudades(
+Id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+Nombre NVARCHAR(50) NOT NULL
+);
+CREATE TABLE Aerolineas(
+Id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+Nombre VARCHAR(50) NOT NULL
+);
+CREATE TABLE Vuelos(
+Id INT PRIMARY KEY NOT NULL,
+Fecha DATE NOT NULL,
+Salida TIME NOT NULL,
+Llegada TIME NOT NULL,
+Origen INT NOT NULL,
+CONSTRAINT Fk_CiudadOrigen FOREIGN KEY(Origen)
+REFERENCES Ciudades (Id),
+Destino INT NOT NULL,
+CONSTRAINT Fk_CiudadDestino FOREIGN KEY(Destino)
+REFERENCES Ciudades (Id),
+Aerolinea INT NOT NULL,
+CONSTRAINT Fk_Aerolinea FOREIGN KEY(Aerolinea)
+REFERENCES Aerolineas (Id),
+Estado BIT NOT NULL
+);
+CREATE TABLE ADMINISTRADORES(
+Cedula INT PRIMARY KEY NOT NULL,
+Pass nvarchar(20) NOT NULL
+);
+
+INSERT INTO ADMINISTRADORES
+VALUES
+(1010068826,'Admin1234')
+
+INSERT INTO Ciudades
+VALUES 
+('Bogotá'),
+('Barranquilla'),
+('Medellin'),
+('Cali')
+
+INSERT INTO Aerolineas
+VALUES
+('Avianca'),
+('Wingo'),
+('Latam')
